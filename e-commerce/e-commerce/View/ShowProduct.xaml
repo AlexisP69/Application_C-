@@ -1,0 +1,48 @@
+﻿<Window x:Class="e_commerce.View.ShowProduct"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:e_commerce.View"
+        mc:Ignorable="d"
+        WindowStyle="None"
+        WindowStartupLocation="CenterScreen"
+        Title="ShowProduct" Height="450" Width="800">
+
+    <Grid Height="434" VerticalAlignment="Top" Margin="0,16,0,0">
+        <Button x:Name="SelectBtn" Content="Select" HorizontalAlignment="Left" Margin="454,104,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.363,-0.231" Click="Select_Click"/>
+        <Button x:Name="UpdateBtn" Content="Update" HorizontalAlignment="Left" Margin="614,104,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.363,-0.231" Click="Update_Click"/>
+        <Button x:Name="InsertBtn" Content="Insert" HorizontalAlignment="Left" Margin="532,104,0,0" VerticalAlignment="Top" RenderTransformOrigin="3.279,0.574" Click="Button_Click"/>
+        <Button x:Name="DeleteBtn" Content="Delete" HorizontalAlignment="Left" Margin="704,104,0,0" VerticalAlignment="Top" RenderTransformOrigin="2.151,-4.576" Click="DeleteBtn_Click"/>
+        <Label Content="Name" HorizontalAlignment="Left" Margin="10,52,0,0" VerticalAlignment="Top" Height="37"/>
+        <Label Content="Quantity" HorizontalAlignment="Left" Margin="6,90,0,0" VerticalAlignment="Top" Height="25" RenderTransformOrigin="0.403,-0.238"/>
+        <Label Content="Price" HorizontalAlignment="Left" Margin="208,52,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.528,0.778"/>
+
+        <Label Content="Description" HorizontalAlignment="Left" Margin="191,93,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.528,0.778"/>
+
+        <Label Content="ID" HorizontalAlignment="Left" Margin="554,60,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.387,0.284"/>
+        <DataGrid Name="Product" ItemsSource="{Binding}" Margin="0,138,0,0"/>
+        <TextBox Name="price_txt" HorizontalAlignment="Left" Margin="269,60,0,0"  VerticalAlignment="Top" Width="120"/>
+        <TextBox Name="name_txt" HorizontalAlignment="Left" Margin="69,60,0,0"  VerticalAlignment="Top" Width="98"/>
+        <TextBox Name="quantity_txt" HorizontalAlignment="Left" Margin="69,97,0,0"  VerticalAlignment="Top" Width="70"/>
+        <TextBox Name="description_txt" HorizontalAlignment="Left" Margin="269,97,0,0"  VerticalAlignment="Top" Width="131" RenderTransformOrigin="0.564,0.976"/>
+        <TextBox Name="search_txt" HorizontalAlignment="Left" Margin="581,64,0,0"  VerticalAlignment="Top" Width="120"/>
+        <Grid Height="411" VerticalAlignment="Top" Margin="6,-278,-6,0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="340*"/>
+                <ColumnDefinition Width="134*"/>
+                <ColumnDefinition Width="74*"/>
+                <ColumnDefinition Width="139*"/>
+                <ColumnDefinition Width="113*"/>
+            </Grid.ColumnDefinitions>
+
+            <TextBlock Text="AmazHess"
+                Foreground="Wheat"
+                FontSize="25"
+                FontWeight="Medium"
+                FontFamily="Montserrat"
+                Margin="318,283,52,98" TextAlignment="Center" Background="Black" Grid.ColumnSpan="3"/>
+        </Grid>
+        <Button x:Name="btnClose" Content="X" HorizontalAlignment="Left" Margin="766,0,0,0" VerticalAlignment="Top" Click="btnClose_Click"/>
+    </Grid>
+</Window>
